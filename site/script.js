@@ -18,20 +18,16 @@ document.addEventListener("DOMContentLoaded", async () => {
   const currentPage = body.dataset.page || "";
   const crumb = body.dataset.crumb || "";
 
-  // 2) Set breadcrumb text
+  // 2) Set breadcrumb
   const crumbSpan = document.querySelector(".crumb-section");
-  if (crumbSpan) {
-    crumbSpan.textContent = crumb;
-  }
+  if (crumbSpan) crumbSpan.textContent = crumb;
 
-  // 3) Highlight active sidebar link
+  // 3) Highlight current page in sidebar
   document.querySelectorAll("#sidebar a[data-page]").forEach((a) => {
-    if (a.dataset.page === currentPage) {
-      a.classList.add("active");
-    }
+    if (a.dataset.page === currentPage) a.classList.add("active");
   });
 
-  // 4) Sidebar toggle for mobile
+  // 4) Sidebar toggle
   const sidebarBtn = document.getElementById("sidebar-toggle");
   if (sidebarBtn) {
     sidebarBtn.addEventListener("click", () => {
@@ -39,7 +35,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
   }
 
-  // 5) Dark / light theme toggle
+  // 5) Dark / light theme
   const themeToggle = document.getElementById("theme-toggle");
 
   function applyTheme(theme) {
@@ -65,23 +61,18 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
   }
 
-  // 6) Set year in footer
+  // 6) Footer year
   const yearEl = document.getElementById("year");
-  if (yearEl) {
-    yearEl.textContent = new Date().getFullYear();
-  }
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-  // 7) Build "On this page" TOC from h2 headings
+  // 7) Auto "On this page" from h2 headings
   const tocList = document.getElementById("toc-list");
   if (tocList) {
     const headings = document.querySelectorAll("#content h2");
     headings.forEach((h) => {
       let id = h.id;
       if (!id) {
-        id = h.textContent
-          .trim()
-          .toLowerCase()
-          .replace(/[^\w]+/g, "-");
+        id = h.textContent.trim().toLowerCase().replace(/[^\w]+/g, "-");
         h.id = id;
       }
       const li = document.createElement("li");
