@@ -16,6 +16,44 @@ body {
   background-color: #f7f7f7;
   color: #222;
 }
+body.theme-light {
+  background-color: #f7f7f7;
+  color: #222;
+}
+
+body.theme-dark {
+  background-color: #0b1020;
+  color: #e5e7eb;
+}
+
+body.theme-dark #content {
+  background: #020617;
+  color: #e5e7eb;
+}
+
+body.theme-dark #sidebar,
+body.theme-dark #page-toc,
+body.theme-dark .topbar,
+body.theme-dark #site-footer {
+  background: #020617;
+  border-color: #1f2937;
+}
+
+body.theme-dark .sidebar-link {
+  color: #e5e7eb;
+}
+
+body.theme-dark .sidebar-link.active {
+  background: #2563eb;
+}
+
+body.theme-dark a {
+  color: #38bdf8;
+}
+body.theme-dark a:hover {
+  color: #0ea5e9;
+}
+
 
 /* Top bar */
 #site-header {
