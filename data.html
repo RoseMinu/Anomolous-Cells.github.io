@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Anomalous Battery Cells – 2 Data</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <link rel="stylesheet" href="css/custom_style.css" />
+</head>
+
+<body class="nav-sidebar">
+
+<header id="site-header">
+  <div class="topbar">
+    <div class="topbar-left">
+      <button class="sidebar-toggle" aria-label="Toggle sidebar" onclick="document.body.classList.toggle('sidebar-open');">
+        ☰
+      </button>
+      <div class="breadcrumb">
+        <span class="crumb-section">2 Data</span>
+      </div>
+    </div>
+    <div class="topbar-right">
+      <span class="site-title">Anomalous Battery Cells</span>
+    </div>
+  </div>
+</header>
+
+<div id="page-layout">
+  <nav id="sidebar">
+    <div class="sidebar-inner">
+      <div class="sidebar-title">Contents</div>
+      <ul class="sidebar-menu">
+        <li>
+          <a href="index.html" class="sidebar-link">
+            <span class="menu-number">1</span>
+            <span class="menu-text">Introduction</span>
+          </a>
+        </li>
+        <li>
+          <a href="data.html" class="sidebar-link active">
+            <span class="menu-number">2</span>
+            <span class="menu-text">Data</span>
+          </a>
+        </li>
+        <li>
+          <a href="eda.html" class="sidebar-link">
+            <span class="menu-number">3</span>
+            <span class="menu-text">Exploratory Data Analysis</span>
+          </a>
+        </li>
+        <li>
+          <a href="models.html" class="sidebar-link">
+            <span class="menu-number">4</span>
+            <span class="menu-text">Modelling</span>
+          </a>
+        </li>
+        <li>
+          <a href="results.html" class="sidebar-link">
+            <span class="menu-number">5</span>
+            <span class="menu-text">Results</span>
+          </a>
+        </li>
+        <li>
+          <a href="about.html" class="sidebar-link">
+            <span class="menu-number">6</span>
+            <span class="menu-text">About / Contact</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <aside id="page-toc">
+    <div class="toc-box">
+      <h2>On this page</h2>
+      <ul>
+        <li><a href="#eis-data">EIS Data</a></li>
+        <li><a href="#rate-tests">Rate Capability Tests</a></li>
+      </ul>
+    </div>
+  </aside>
+
+  <main id="content">
+    <article class="article">
+      <header class="article-header">
+        <h1>Data</h1>
+      </header>
+
+      <section id="eis-data">
+        <h2>EIS Data</h2>
+        <p>
+          Describe here how EIS measurements were collected:
+          frequency range, amplitude, temperature conditions,
+          and at which states of charge (e.g., 10%, 30%, 50%, 80% SOC).
+        </p>
+      </section>
+
+      <section id="rate-tests">
+        <h2>Rate Capability Tests</h2>
+        <p>
+          Summarize the rate tests, e.g. capacity measured at 0.2C, 0.5C, 1C, etc.,
+          and how these measurements are used to label or characterize cell performance.
+        </p>
+      </section>
+
+      <nav class="page-nav">
+        <div class="prev-link">
+          <a href="index.html">← Previous: 1 Introduction</a>
+        </div>
+        <div class="next-link">
+          <a href="eda.html">Next: 3 Exploratory Data Analysis →</a>
+        </div>
+      </nav>
+    </article>
+  </main>
+</div>
+
+<footer id="site-footer">
+  <div class="footer-inner">
+    <span>© <span id="year"></span> Anomalous Battery Cells</span>
+    <a href="https://github.com/RoseMinu/Anomolous-Cells.github.io" target="_blank" rel="noopener">
+      View on GitHub
+    </a>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
