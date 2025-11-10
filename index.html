@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anomalous Battery Cell Detection | EIS & Rate Capability</title>
+  <meta name="description" content="Project on identifying anomalous battery cells using impedance spectroscopy (EIS) and rate capability analysis." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="top-nav">
+    <div class="container nav-inner">
+      <div class="logo">
+        Anomalous&nbsp;Cells
+      </div>
+      <nav>
+        <a href="#overview">Overview</a>
+        <a href="#data-methods">Data & Methods</a>
+        <a href="#results">Results</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero section -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <h1>Detecting Anomalous Battery Cells<br />Using EIS & Rate Capability</h1>
+          <p class="hero-subtitle">
+            Exploratory analysis and modeling for early identification of underperforming
+            or anomalous cells within groups of varying chemistries and mass loading.
+          </p>
+          <div class="hero-actions">
+            <a href="#overview" class="btn primary">Explore the project</a>
+            <a href="https://github.com/RoseMinu/Anomolous-Cells.github.io" class="btn ghost" target="_blank" rel="noopener">
+              View code on GitHub
+            </a>
+          </div>
+          <div class="hero-tags">
+            <span>Electrochemical Impedance Spectroscopy (EIS)</span>
+            <span>Rate Capability</span>
+            <span>Anomaly Detection</span>
+            <span>Battery Analytics</span>
+          </div>
+        </div>
+        <div class="hero-card">
+          <h2>Project Snapshot</h2>
+          <ul>
+            <li><strong>Goal:</strong> Identify anomalous cells inside nominally similar batches.</li>
+            <li><strong>Inputs:</strong> EIS data at multiple states of charge (SOC).</li>
+            <li><strong>Target:</strong> Rate capability &amp; capacity-based performance.</li>
+            <li><strong>Outcome:</strong> Models to flag cells likely to fail or underperform.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Overview -->
+    <section id="overview" class="section">
+      <div class="container">
+        <h2>Project Overview</h2>
+        <p>
+          This project focuses on identifying <strong>anomalous battery cells</strong> within
+          groups of cells that share similar chemistries and mass loading. Using
+          <strong>impedance spectroscopy (EIS)</strong> measured at multiple states of charge,
+          we explore which SOC is most predictive of a cell’s eventual performance under
+          rate capability tests.
+        </p>
+        <p>
+          The pipeline includes:
+        </p>
+        <ol class="numbered-list">
+          <li>Cleaning and organizing EIS data collected at different SOC levels.</li>
+          <li>Exploratory analysis to understand trends and correlations.</li>
+          <li>Feature engineering from EIS spectra and rate tests.</li>
+          <li>Modeling to detect anomalous cells based on rate-capability performance.</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Data & Methods -->
+    <section id="data-methods" class="section alt">
+      <div class="container split">
+        <div>
+          <h2>Data</h2>
+          <ul class="card-list">
+            <li>
+              <strong>EIS measurements</strong><br />
+              Multi-frequency impedance spectra at various states of charge (SOC).
+            </li>
+            <li>
+              <strong>Rate capability tests</strong><br />
+              Capacity and voltage response at different C-rates to quantify performance.
+            </li>
+            <li>
+              <strong>Cell groups</strong><br />
+              Cells with varying chemistries and mass loading, enabling cross-group comparison.
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h2>Methods</h2>
+          <ul class="card-list">
+            <li>
+              <strong>Exploratory analysis</strong><br />
+              Correlating EIS features with rate capability to find the most predictive SOC.
+            </li>
+            <li>
+              <strong>Feature engineering</strong><br />
+              Extraction of magnitude/phase features, characteristic frequencies, and
+              summary statistics from Nyquist and Bode representations.
+            </li>
+            <li>
+              <strong>Modelling & anomaly detection</strong><br />
+              Supervised and unsupervised approaches to flag cells with abnormal
+              rate-capability behaviour relative to the group.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Results -->
+    <section id="results" class="section">
+      <div class="container">
+        <h2>Key Findings (high-level)</h2>
+        <div class="grid-3">
+          <article class="result-card">
+            <h3>Predictive SOC identification</h3>
+            <p>
+              EIS at specific SOC windows shows stronger correlation with rate capability,
+              helping to prioritize which SOC to measure in future experiments.
+            </p>
+          </article>
+          <article class="result-card">
+            <h3>Anomaly patterns</h3>
+            <p>
+              Anomalous cells exhibit distinct impedance signatures compared to the bulk,
+              especially in low-frequency regions linked to transport limitations.
+            </p>
+          </article>
+          <article class="result-card">
+            <h3>Practical impact</h3>
+            <p>
+              Early screening of cells enables removal or closer monitoring of outliers,
+              improving overall pack reliability and experimental efficiency.
+            </p>
+          </article>
+        </div>
+        <p class="note">
+          Detailed plots, notebooks, and model implementations are available in the
+          <a href="https://github.com/RoseMinu/Anomolous-Cells.github.io" target="_blank" rel="noopener">
+            GitHub repository
+          </a>.
+        </p>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section alt">
+      <div class="container split">
+        <div>
+          <h2>About the Author</h2>
+          <p>
+            I am a PhD researcher working on battery analytics, with a focus on using
+            <strong>time-series and impedance data</strong> to understand cell behaviour,
+            predict performance, and detect anomalies early in the process.
+          </p>
+          <p>
+            This project is part of a broader effort to combine
+            <strong>electrochemistry</strong> and <strong>machine learning</strong> to
+            design better diagnostics and quality-control tools for lithium-ion cells.
+          </p>
+        </div>
+        <div>
+          <h3>Topics & interests</h3>
+          <ul class="pill-list">
+            <li>Battery health & degradation</li>
+            <li>EIS & advanced diagnostics</li>
+            <li>Time-series modelling</li>
+            <li>Anomaly & outlier detection</li>
+            <li>Data-driven formation & screening</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact"
