@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Anomalous Battery Cells – 3 Exploratory Data Analysis</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <link rel="stylesheet" href="../css/custom_style.css" />
+</head>
+
+<body class="nav-sidebar theme-light"
+      data-page="eda"
+      data-crumb="3 Exploratory Data Analysis">
+
+  <div id="site-header-placeholder"></div>
+
+  <div id="page-layout">
+    <div id="sidebar-placeholder"></div>
+
+    <main id="content">
+      <article class="article">
+        <header class="article-header">
+          <h1>Exploring behavioural signals</h1>
+          <div class="article-meta">
+            <div><strong>Lead analyst:</strong> Priya Chen</div>
+            <div><strong>Status:</strong> In progress</div>
+          </div>
+        </header>
+
+        <section>
+          <h2>Objectives</h2>
+          <p>
+            The exploratory phase seeks to understand how voltage sag, temperature spread, charge cycles, and
+            contextual telemetry interact. Findings here inform feature engineering, data cleaning, and early
+            hypotheses for model design.
+          </p>
+          <ul class="bullet-grid">
+            <li>Quantify normal vs abnormal ranges for key sensor readings.</li>
+            <li>Expose correlations between environmental conditions and performance.</li>
+            <li>Identify patterns that precede flagged anomalies in historical incidents.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Key visuals to develop</h2>
+          <div class="grid two-col">
+            <figure class="chart-placeholder">
+              <figcaption>Future chart: Temperature gradients over time</figcaption>
+            </figure>
+            <figure class="chart-placeholder">
+              <figcaption>Future chart: Voltage vs. current scatter</figcaption>
+            </figure>
+            <figure class="chart-placeholder">
+              <figcaption>Future heatmap: Feature correlations</figcaption>
+            </figure>
+            <figure class="chart-placeholder">
+              <figcaption>Future chart: Charge cycle clustering</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section>
+          <h2>Planned analyses</h2>
+          <div class="list-grid">
+            <div class="list-card">
+              <span class="badge">EDA-01</span>
+              <h3>Session profiling</h3>
+              <p>Compute descriptive statistics per driving or discharge session to detect outliers.</p>
+            </div>
+            <div class="list-card">
+              <span class="badge">EDA-02</span>
+              <h3>Temporal drift</h3>
+              <p>Rolling windows to observe gradual degradation and detect seasonality.</p>
+            </div>
+            <div class="list-card">
+              <span class="badge">EDA-03</span>
+              <h3>Multivariate clustering</h3>
+              <p>Dimensionality reduction (UMAP/TSNE) to highlight cell behaviour groupings.</p>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2>Interim learnings</h2>
+          <div class="callout success">
+            <h3>Highlights so far</h3>
+            <ul>
+              <li>Cells with >5°C deviation from pack median show 3× higher anomaly scores.</li>
+              <li>Voltage sag events cluster around rapid charge ramps in colder climates.</li>
+              <li>Ambient humidity correlates with increased impedance variability.</li>
+            </ul>
+          </div>
+        </section>
+
+        <nav class="page-nav">
+          <div class="prev-link">
+            <a href="data.html">← Previous: 2 Data</a>
+          </div>
+          <div class="next-link">
+            <a href="models.html">Next: 4 Modelling →</a>
+          </div>
+        </nav>
+      </article>
+    </main>
+
+    <aside id="page-toc">
+      <div class="toc-box">
+        <h2>On this page</h2>
+        <ul id="toc-list"></ul>
+      </div>
+    </aside>
+  </div>
+
+  <div id="footer-placeholder"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

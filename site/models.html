@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Anomalous Battery Cells – 4 Modelling</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <link rel="stylesheet" href="../css/custom_style.css" />
+</head>
+
+<body class="nav-sidebar theme-light"
+      data-page="models"
+      data-crumb="4 Modelling">
+
+  <div id="site-header-placeholder"></div>
+
+  <div id="page-layout">
+    <div id="sidebar-placeholder"></div>
+
+    <main id="content">
+      <article class="article">
+        <header class="article-header">
+          <h1>Building anomaly detection models</h1>
+          <div class="article-meta">
+            <div><strong>Experiment tracker:</strong> MLflow workspace #42</div>
+            <div><strong>Validation window:</strong> Jan–Mar 2025</div>
+          </div>
+        </header>
+
+        <section>
+          <h2>Strategy</h2>
+          <p>
+            We layer statistical heuristics with machine learning models to capture both interpretable thresholds and
+            complex multivariate behaviour. The stack is designed for transparency so operations teams can trace why a
+            cell was flagged.
+          </p>
+          <div class="grid three-col">
+            <div class="card">
+              <h3>Baselines</h3>
+              <p>EWMA control limits and z-score rules establish immediate guardrails.</p>
+            </div>
+            <div class="card">
+              <h3>Machine learning</h3>
+              <p>LSTM autoencoders and isolation forests compare residuals across sensors.</p>
+            </div>
+            <div class="card">
+              <h3>Explainability</h3>
+              <p>SHAP summaries and counterfactuals provide actionable narratives.</p>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2>Pipeline architecture</h2>
+          <div class="grid two-col">
+            <figure class="chart-placeholder">
+              <figcaption>Future diagram: Feature engineering workflow</figcaption>
+            </figure>
+            <figure class="chart-placeholder">
+              <figcaption>Future chart: Model comparison (AUC / F1)</figcaption>
+            </figure>
+          </div>
+          <p>
+            Each candidate model is evaluated in weekly batches with stratified sampling across pack families. We track
+            precision at top-k anomalies alongside recall of historic failure events to balance efficiency and safety.
+          </p>
+        </section>
+
+        <section>
+          <h2>Experiment backlog</h2>
+          <div class="table-wrapper">
+            <table class="data-table compact">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Hypothesis</th>
+                  <th>Status</th>
+                  <th>Notes</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>EXP-101</td>
+                  <td>Autoencoder with dropout regularisation reduces false positives</td>
+                  <td>Running</td>
+                  <td>Monitoring reconstruction error stability</td>
+                </tr>
+                <tr>
+                  <td>EXP-088</td>
+                  <td>Graph neural network improves cross-pack contextual signals</td>
+                  <td>Planned</td>
+                  <td>Requires topology metadata ingestion</td>
+                </tr>
+                <tr>
+                  <td>EXP-076</td>
+                  <td>Hybrid rule + ML ensemble matches service team priorities</td>
+                  <td>Review</td>
+                  <td>Awaiting business stakeholder feedback</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section>
+          <h2>Deployment considerations</h2>
+          <div class="callout warning">
+            <h3>Things we are validating</h3>
+            <ul>
+              <li>Latency impact of on-device inference vs. cloud batch scoring.</li>
+              <li>Fallback rules when sensors go offline or drift beyond training ranges.</li>
+              <li>Alert fatigue mitigation through adaptive thresholds.</li>
+            </ul>
+          </div>
+        </section>
+
+        <nav class="page-nav">
+          <div class="prev-link">
+            <a href="eda.html">← Previous: 3 Exploratory Data Analysis</a>
+          </div>
+          <div class="next-link">
+            <a href="results.html">Next: 5 Results →</a>
+          </div>
+        </nav>
+      </article>
+    </main>
+
+    <aside id="page-toc">
+      <div class="toc-box">
+        <h2>On this page</h2>
+        <ul id="toc-list"></ul>
+      </div>
+    </aside>
+  </div>
+
+  <div id="footer-placeholder"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
