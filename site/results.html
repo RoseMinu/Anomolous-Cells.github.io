@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Anomalous Battery Cells – 5 Results</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <link rel="stylesheet" href="../css/custom_style.css" />
+</head>
+
+<body class="nav-sidebar theme-light"
+      data-page="results"
+      data-crumb="5 Results">
+
+  <div id="site-header-placeholder"></div>
+
+  <div id="page-layout">
+    <div id="sidebar-placeholder"></div>
+
+    <main id="content">
+      <article class="article">
+        <header class="article-header">
+          <h1>Insights and next steps</h1>
+          <div class="article-meta">
+            <div><strong>Latest evaluation:</strong> 2025‑03‑08</div>
+            <div><strong>Reviewer:</strong> Safety Analytics Council</div>
+          </div>
+        </header>
+
+        <section>
+          <h2>Performance snapshot</h2>
+          <div class="grid two-col">
+            <figure class="chart-placeholder">
+              <figcaption>Future chart: Precision / recall lift</figcaption>
+            </figure>
+            <figure class="chart-placeholder">
+              <figcaption>Future chart: Alert volume trend</figcaption>
+            </figure>
+          </div>
+          <p>
+            Early experiments indicate a 41% improvement in precision at the top 5% of anomaly scores while keeping
+            recall within safety targets. Alert volume remains within operational capacity for the field support team.
+          </p>
+        </section>
+
+        <section>
+          <h2>Key findings</h2>
+          <div class="list-grid">
+            <div class="list-card">
+              <span class="badge">Insight 1</span>
+              <h3>Thermal gradients lead anomalies</h3>
+              <p>Temperature variance is the strongest lead indicator, preceding voltage anomalies by ~45 minutes.</p>
+            </div>
+            <div class="list-card">
+              <span class="badge">Insight 2</span>
+              <h3>Charging behaviour matters</h3>
+              <p>Rapid charge sessions at low ambient temperatures drive most false positives in current baselines.</p>
+            </div>
+            <div class="list-card">
+              <span class="badge">Insight 3</span>
+              <h3>Explainability builds trust</h3>
+              <p>Service teams prefer SHAP narratives that point to specific sensor deviations per alert.</p>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2>Readiness checklist</h2>
+          <ul class="checklist">
+            <li class="complete">📦 Data pipelines harden nightly refresh</li>
+            <li class="complete">🧪 Cross-pack validation scenarios executed</li>
+            <li class="pending">⚙️ Integrate alert feedback loop into service portal</li>
+            <li class="pending">📈 Automate live dashboards for operations</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Roadmap</h2>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <h3>Pilot deployment</h3>
+                <p>Launch in two regions with weekly review cadences.</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <h3>Feedback assimilation</h3>
+                <p>Fold service engineer annotations back into labelling pipeline.</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <h3>Scale-out</h3>
+                <p>Expand monitoring to stationary storage fleets with tailored thresholds.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <nav class="page-nav">
+          <div class="prev-link">
+            <a href="models.html">← Previous: 4 Modelling</a>
+          </div>
+          <div class="next-link">
+            <a href="about.html">Next: 6 About / Contact →</a>
+          </div>
+        </nav>
+      </article>
+    </main>
+
+    <aside id="page-toc">
+      <div class="toc-box">
+        <h2>On this page</h2>
+        <ul id="toc-list"></ul>
+      </div>
+    </aside>
+  </div>
+
+  <div id="footer-placeholder"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
